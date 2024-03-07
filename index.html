@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Cadastro de Veículos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <main>
+        <div>
+            <h1>Cadastro de Veículo</h1>
+            <p>Preencha as informações:</p>
+        </div>
+
+        <form>
+            <fieldset>
+
+                <div>
+                    <label>Cliente</label>
+                    <input type="text" name="client" id="nameClient" placeholder="João da Silva" >
+                </div>
+
+                <div>
+                    <label>Telefone</label>
+                    <input type="tel" name="telphone" id="telphone" placeholder="(69)9999-9999" >
+                </div>
+
+                <div>
+                    <label>CPF/CNH</label>
+                    <input type="number" name="document" id="document" placeholder="000.000.000-00" >
+                </div>
+
+                <div>
+                    <label>Endereço</label>
+                    <input type="text" name="andress" id="andress" placeholder="Rua São Paulo, 000 - Bairro" >
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset>
+                 <div>
+                    <label>Marca</label>
+                    <input type="text" name="brand" id="brand" placeholder="Chevrolet" >
+                </div>
+                    
+                <div>
+                    <label>Modelo</label>
+                    <input type="text" name="model" id="model" placeholder="Onix" >
+                </div>
+                                
+                <div>
+                    <label>Ano</label>
+                    <input type="number" min="1950" max="2027" step="1" value="2024" name="year" id="year">
+                </div>
+                    
+                <div>
+                    <label>Cor</label>
+                    <input type="text" name="color" id="color" placeholder="Prata" >
+                </div>
+                    
+                <div>
+                    <label>Combustível</label>
+                        <select name="fuel">
+                            <option selected disabled value="">Selecione</option>
+                            <option>Gasolina</option>
+                            <option>Etanol</option>
+                            <option>Gasolina/Etanol</option>
+                            <option>Diesel</option>
+                        </select>
+                </div>
+                    
+                <div>
+                    <label>Problema apresentado</label>
+                    <input type="text" maxlength="150" name="problem" id="problem">
+                </div>
+
+            </fieldset>
+
+            <button>Enviar</button>
+        
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
