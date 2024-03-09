@@ -9,82 +9,105 @@
 
 <body>
 
+    <header>
+
+        <span class="material-symbols-outlined">menu</span>
+        <h1>Oficina Lata Velha</h1>
+        <span class="img-header"><img src="assets/icons-car.png" width="50px" height="50px" alt=""></span>
+
+    </header>
+
     <main>
-        <div>
-            <h1>Cadastro de Veículo</h1>
-            <p>Preencha as informações:</p>
-        </div>
-
+        
         <form>
-            <fieldset>
+        
+            <fieldset class="container-form">
 
-                <div>
+                <section class="registration">
+                    <h2>Cadastro de Veículo</h2>
+                </section>
+
+                <section class="client">
                     <label>Cliente</label>
-                    <input type="text" name="client" id="nameClient" placeholder="João da Silva" >
-                </div>
+                    <input type="text" name="client" id="nameClient" autocomplete="off" placeholder="João da Silva">
+                </section>
 
-                <div>
+                <section>
                     <label>Telefone</label>
-                    <input type="tel" name="telphone" id="telphone" placeholder="(69)9999-9999" >
-                </div>
+                    <input type="tel" name="telphone" id="telphone" autocomplete="off" placeholder="(69)9999-9999">
+                </section>
 
-                <div>
+                <section>
                     <label>CPF/CNH</label>
-                    <input type="number" name="document" id="document" placeholder="000.000.000-00" >
-                </div>
+                    <input type="text" name="document" id="document" autocomplete="off" min="0" maxlength="11" placeholder="000.000.000-00">
+                </section>
 
-                <div>
+                <section>
                     <label>Endereço</label>
-                    <input type="text" name="andress" id="andress" placeholder="Rua São Paulo, 000 - Bairro" >
-                </div>
+                    <input type="text" name="andress" id="andress" autocomplete="off" placeholder="Rua São Paulo, 000 - Bairro">
+                </section>
 
-            </fieldset>
+                <section>
+                    <label>Data</label>
+                    <input type="date" name="date" id="date">
+                </section>
 
-
-
-            <fieldset>
-                 <div>
+                <section>
                     <label>Marca</label>
-                    <input type="text" name="brand" id="brand" placeholder="Chevrolet" >
-                </div>
+                    <input type="text" name="brand" id="brand" autocomplete="off" placeholder="Chevrolet" >
+                </section>
                     
-                <div>
+                <section>
                     <label>Modelo</label>
-                    <input type="text" name="model" id="model" placeholder="Onix" >
-                </div>
+                    <input type="text" name="model" id="model" autocomplete="off" placeholder="Onix" >
+                </section>
+
+                <section>
+                    <label>Placa do Veículo</label>
+                    <input type="text" name="plate" id="plate" autocomplete="off" maxlength="7" placeholder="AB123CD">
+                </section>
                                 
-                <div>
+                <section>
                     <label>Ano</label>
-                    <input type="number" min="1950" max="2027" step="1" value="2024" name="year" id="year">
-                </div>
+                    <input type="number" name="year" min="1960" max="2027" step="1" value="2024"id="year">
+                </section>
                     
-                <div>
+                <section>
                     <label>Cor</label>
-                    <input type="text" name="color" id="color" placeholder="Prata" >
-                </div>
+                    <input type="text" name="color" id="color" autocomplete="off" placeholder="Prata" >
+                </section>
                     
-                <div>
+                <section id="fuel">
                     <label>Combustível</label>
                         <select name="fuel">
                             <option selected disabled value="">Selecione</option>
                             <option>Gasolina</option>
                             <option>Etanol</option>
-                            <option>Gasolina/Etanol</option>
                             <option>Diesel</option>
+                            <option>Gasolina/Etanol</option>
                         </select>
-                </div>
+                </section>
                     
-                <div>
+                <section>
                     <label>Problema apresentado</label>
-                    <input type="text" maxlength="150" name="problem" id="problem">
-                </div>
+                    <input type="text" maxlength="150" name="problem" id="problem" autocomplete="off">
+                </section>
+
+                <button>Enviar</button>
 
             </fieldset>
 
-            <button>Enviar</button>
-        
+            <section class="imgCar">
+                <img src="assets/automobile-repair.svg" width="600px" height="600px" alt="Homem consertando carro">
+            </section>
+
         </form>
+
     </main>
+
+    <footer>
+        <p>Desenvolvido por Ana Carolina <img src="assets/icon-linkedin.png" alt=""></p>
+    </footer>
 
     <script src="script.js"></script>
 
