@@ -1,61 +1,35 @@
-
-function editCar(index) {
-    const car = carList[index];
-
-    // Preencher o formulário de edição com os dados do carro selecionado
-    document.getElementById('edit-client').value = car.client;
-    document.getElementById('edit-telphone').value = car.telphone;
-    document.getElementById('edit-doc').value = car.doc;
-    document.getElementById('edit-andress').value = car.andress;
-    document.getElementById('edit-date').value = car.date;
-    document.getElementById('edit-brand').value = car.brand;
-    document.getElementById('edit-model').value = car.model;
-    document.getElementById('edit-plate').value = car.plate;
-    document.getElementById('edit-year').value = car.year;
-    document.getElementById('edit-color').value = car.color;
-    document.getElementById('edit-fuel').value = car.fuel;
-    document.getElementById('edit-problem').value = car.problem;
-
-    // Adicionar um evento de clique para o botão de cancelar
-    document.getElementById('cancel-edit').addEventListener('click', function() {
-        // Esconder o formulário de edição
-        document.getElementById('edit-form').reset(); // Resetar o formulário
-        document.getElementById('edit-form').style.display = 'none';
-    });
-
-    // Remover o evento de submissão para evitar a duplicação
-    document.getElementById('edit-form').removeEventListener('submit', editFormSubmit);
-
-    // Definir um evento de submissão para o formulário de edição
-    document.getElementById('edit-form').addEventListener('submit', editFormSubmit);
-
-    // Exibir o formulário de edição
-    document.getElementById('edit-form').style.display = 'block';
+class Car {
+    constructor(
+      client,
+      telphone,
+      doc,
+      andress,
+      date,
+      brand,
+      model,
+      plate,
+      year,
+      color,
+      fuel,
+      problem
+    ) {
+      this.client = client;
+      this.telphone = telphone;
+      this.doc = doc;
+      this.andress = andress;
+      this.date = date;
+      this.brand = brand;
+      this.model = model;
+      this.plate = plate;
+      this.year = year;
+      this.color = color;
+      this.fuel = fuel;
+      this.problem = problem;
+    }
 }
+  
+  let carList = [];
 
-function editFormSubmit(e) {
-    e.preventDefault();
-    // Obter os dados do formulário
-    const index = parseInt(this.getAttribute('data-index'));
-    const editedClient = document.getElementById('edit-client').value;
-    const editedTelphone = document.getElementById('edit-telphone').value;
-    const editedDoc = document.getElementById('edit-doc').value;
-    const editedAndress = document.getElementById('edit-andress').value;
-    const editedDate = document.getElementById('edit-date').value;
-    const editedBrand = document.getElementById('edit-brand').value;
-    const editedModel = document.getElementById('edit-model').value;
-    const editedPlate = document.getElementById('edit-plate').value.toUpperCase();
-    const editedYear = document.getElementById('edit-year').value;
-    const editedColor = document.getElementById('edit-color').value;
-    const editedFuel = document.getElementById('edit-fuel').value;
-    const editedProblem = document.getElementById('edit-problem').value;
-
-    
-    displayCars();
-    // Esconder o formulário de edição
-    document.getElementById('edit-car-form').reset(); // Resetar o formulário
-    document.getElementById('edit-car-form').style.display = 'none';
-}
 
 function handleFormSubmit(event){
     event.preventDefault();
