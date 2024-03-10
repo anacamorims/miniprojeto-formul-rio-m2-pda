@@ -6,31 +6,36 @@
     <title>Cadastro de Veículos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="shortcut icon" href="assets/favicon-car.png">
 </head>
 
+
 <body>
+
 
     <header>
 
         <span class="material-symbols-outlined">menu</span>
-        <h1>Oficina Lata Velha</h1>
-        <span class="img-header"><img src="assets/icons-car.png" width="50px" height="50px" alt=""></span>
+        <h1 class="title-header">Mecânica Lata Velha</h1>
+        <span class="img-header"><img src="assets/icon-car.png" width="50px" height="50px" alt="Carro amarelo"></span>
 
     </header>
 
+
+
     <main>
         
-        <form>
+        <form id="carForm">
         
             <fieldset class="container-form">
 
-                <section class="registration">
+                <section class="title-form">
                     <h2>Cadastro de Veículo</h2>
                 </section>
 
-                <section class="client">
+                <section>
                     <label>Cliente</label>
-                    <input type="text" name="client" id="nameClient" autocomplete="off" placeholder="João da Silva">
+                    <input type="text" name="client" id="client" autocomplete="off" placeholder="João da Silva">
                 </section>
 
                 <section>
@@ -39,8 +44,8 @@
                 </section>
 
                 <section>
-                    <label>CPF/CNH</label>
-                    <input type="text" name="document" id="document" autocomplete="off" min="0" maxlength="11" placeholder="000.000.000-00">
+                    <label>CPF</label>
+                    <input type="text" name="document" id="doc" autocomplete="off" min="0" maxlength="11" placeholder="000.000.000-00">
                 </section>
 
                 <section>
@@ -70,7 +75,7 @@
                                 
                 <section>
                     <label>Ano</label>
-                    <input type="number" name="year" min="1960" max="2027" step="1" value="2024"id="year">
+                    <input type="number" name="year" min="1960" max="2027" step="1" value="2024" id="year">
                 </section>
                     
                 <section>
@@ -78,14 +83,14 @@
                     <input type="text" name="color" id="color" autocomplete="off" placeholder="Prata" >
                 </section>
                     
-                <section id="fuel">
+                <section>
                     <label>Combustível</label>
-                        <select name="fuel">
-                            <option selected disabled value="">Selecione</option>
-                            <option>Gasolina</option>
-                            <option>Etanol</option>
-                            <option>Diesel</option>
-                            <option>Gasolina/Etanol</option>
+                        <select name="option" class="fuel" id="fuel">
+                            <option>Selecione</option>
+                            <option value="Gasolina">Gasolina</option>
+                            <option value="Etanol">Etanol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Gasolina/Etanol">Gasolina/Etanol</option>
                         </select>
                 </section>
                     
@@ -94,23 +99,116 @@
                     <input type="text" maxlength="150" name="problem" id="problem" autocomplete="off">
                 </section>
 
-                <button>Enviar</button>
+
+                <button id="submit">Enviar</button>
+
 
             </fieldset>
+
 
             <section class="imgCar">
                 <img src="assets/automobile-repair.svg" width="600px" height="600px" alt="Homem consertando carro">
             </section>
 
+
         </form>
 
+
+        <div id="car-list"></div>
+
+
+        <div id="edit-form">
+            
+            <form id="edit-car-form">
+
+            
+                <h2 class="title-edit-form">Formulário de Edição</h2>
+
+                <section class="client">
+                    <label>Cliente</label>
+                    <input type="text" id="edit-client" name="edit-client" autocomplete="off" placeholder="João da Silva">
+                </section>
+
+                <section>
+                    <label>Telefone</label>
+                    <input type="tel" id="edit-telphone" name="edit-telphone" autocomplete="off" placeholder="(69)9999-9999">
+                </section>
+
+                <section>
+                    <label>CPF</label>
+                    <input type="text" id="edit-doc" name="edit-doc" autocomplete="off" min="0" maxlength="11" placeholder="000.000.000-00">
+                </section>
+
+                <section>
+                    <label>Endereço</label>
+                    <input type="text" id="edit-andress" name="edit-andress" autocomplete="off" placeholder="Rua São Paulo, 000 - Bairro">
+                </section>
+
+                <section>
+                    <label>Data</label>
+                    <input type="date" id="edit-date" class="input-edit" name="edit-date">
+                </section>
+
+                <section>
+                    <label>Marca</label>
+                    <input type="text" id="edit-brand" name="edit-brand" autocomplete="off" placeholder="Chevrolet" >
+                </section>
+            
+                <section>
+                    <label>Modelo</label>
+                    <input type="text" id="edit-model" name="edit-model" autocomplete="off" placeholder="Onix" >
+                </section>
+
+                <section>
+                    <label>Placa do Veículo</label>
+                    <input type="text" id="edit-plate" name="edit-plate" autocomplete="off" maxlength="7" placeholder="AB123CD">
+                </section>
+            
+                <section>
+                    <label>Ano</label>
+                    <input type="number" name="edit-year" min="1960" max="2027" step="1" value="2024" id="edit-year">
+                </section>
+            
+                <section>
+                    <label>Cor</label>
+                    <input type="text" id="edit-color" name="edit-color" autocomplete="off" placeholder="Prata" >
+                </section>
+            
+                <section>
+                    <label>Combustível</label>
+                        <select name="opcoes" class="fuel" id="edit-fuel">
+                            <option>Selecione</option>
+                            <option value="Gasolina">Gasolina</option>
+                            <option value="Etanol">Etanol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Gasolina/Etanol">Gasolina/Etanol</option>
+                        </select>
+                </section>
+            
+                <section>
+                    <label>Problema apresentado</label>
+                    <input type="text" maxlength="150" name="problem" id="edit-problem" autocomplete="off">
+                </section>
+
+
+                    <button type="submit" id="submit-edit">Salvar Alterações</button>
+                    <button type="button" id="cancel-edit">Cancelar</button>
+
+            </form>
+            
+         </div>
+            
     </main>
 
     <footer>
-        <p>Desenvolvido por Ana Carolina <img src="assets/icon-linkedin.png" alt=""></p>
+
+        <p>Desenvolvido por <strong>Ana Carolina</strong><a href="https://www.linkedin.com/in/ana-carolina-amorim-de-souza/" target="_blank" rel="external"><img class="img-lkdin" src="assets/icons-linkedin.png" width="20px" height="20px"></a></p>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 
 </body>
 </html>
