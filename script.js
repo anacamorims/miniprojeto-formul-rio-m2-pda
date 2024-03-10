@@ -28,7 +28,9 @@ class Car {
   }
 };
 
+
 let carList = [];
+
 
 document.getElementById("carForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -46,7 +48,16 @@ document.getElementById("carForm").addEventListener("submit", function (e) {
   const fuel = document.getElementById("fuel").value;
   const problem = document.getElementById("problem").value;
 
-  const car = new Car(
+
+
+    if (!client || !telphone || !doc || !andress || !date || !brand || !model || !plate || !year || !color || fuel === "Selecione" || !problem) {
+    
+    alert("Por favor, preencha todos os campos.");
+    return;
+    } 
+
+
+    const car = new Car(
     client,
     telphone,
     doc,
@@ -59,10 +70,11 @@ document.getElementById("carForm").addEventListener("submit", function (e) {
     color,
     fuel,
     problem
-  );
+    );
 
   carList.push(car);
   displayCars();
+
 });
 
 
@@ -88,8 +100,8 @@ function displayCars() {
             <p>Cor: ${car.color}<p>
             <p>Combustível: ${car.fuel}
             <p>Problema: ${car.problem}
-            <button class="remove-car" data-index="${index}">Remover</button>
             <button class="edit-button" data-index="${index}">Editar</buton>
+            <button class="remove-car" data-index="${index}">Remover</button>
             `;
 
     carCard.querySelector(".remove-car").addEventListener("click", function () {
@@ -194,7 +206,10 @@ document.getElementById('cancel-edit').addEventListener('click', function() {
     });
 
     document.getElementById('edit-form').style.display = "block";
+    
 }
+
+
 
 
 
