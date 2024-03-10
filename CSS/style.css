@@ -1,0 +1,354 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Average+Sans&family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+
+body{
+    background-color: #e6e7f3;
+    height: auto;
+}
+
+
+header{
+    background-color:#222dc5;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    position: fixed;
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #E0C200;
+}
+
+
+.title-form{
+    margin-bottom: 10%;
+    font-family: "Roboto", sans-serif, 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.material-symbols-outlined{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.img-header{
+    padding-right: 20px;
+}
+
+.img-header:hover{
+    transform: scale(1.1);
+}
+
+.material-symbols-outlined:hover{
+    color: #ccc;
+}
+
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.container-form{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2em;
+    margin: 6rem;
+    width: 400px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: #222dc5;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    line-height: 2rem; 
+    font-family: "Roboto", sans-serif, 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.img-lkdin{
+    position: relative;
+    top: 2px;
+}
+
+
+.img-lkdin:hover{
+    transform: scale(1.1);
+}
+
+
+button{
+    background-color: #E0C200;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif, 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+button:hover{
+    background-color: #e6e7f3;
+    color: #000000;
+}
+
+
+section{
+    margin-bottom: 15px;
+}
+
+
+input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+
+label {
+    color: #000000;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif, 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.fuel{
+    margin-right: 70px;
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 200px;
+    font-size: 16px; 
+    color: #353535; 
+    cursor: pointer;
+}
+
+
+#plate{
+    text-transform: uppercase;
+}
+
+
+#car-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.car-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif, 'Courier New';
+    font-size: 14px; 
+}
+
+
+.remove-car{
+    background-color: red;
+}
+
+
+#edit-form{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto; 
+    max-height: 500px; 
+    padding: 10px;
+    overflow-y: auto;
+    
+}
+
+#submit-edit{
+    background-color: green;
+}
+
+#submit-edit:hover{
+    background-color: #e6e7f3;
+}
+
+#edit-form::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+
+#edit-form::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Cor do polegar da barra de rolagem */
+}
+
+
+#edit-car-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif, 'Courier New';
+    
+}
+
+
+#cancel-edit{
+    background-color: red;
+}
+
+#cancel-edit:hover{
+    background-color: #e6e7f3;
+}
+
+
+  
+@media screen and (max-width: 480px) {
+    
+    form {
+        flex-direction: column;
+    }
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        position: fixed;
+        
+    }
+
+    input {
+        width: 200px;
+    }
+    
+    .container-form {
+        margin: 3rem;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .fuel{
+        margin-right: 20px;
+        width: 100px;
+        font-size: 13px; 
+    }
+
+    .car-card {
+        width: auto;
+        margin-left: 20px;
+        padding: 20px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #car-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edit-button{
+        width: 200px;
+    }
+
+    .remove-car{
+        width: 200px;
+    }
+    
+    
+    #edit-car-form {
+        width: 100%;
+        
+    }
+
+    .imgCar{
+        display: none;
+    }
+
+    #edit-car-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+        width: 100%;
+    }
+
+    #submit-edit{
+        width: 200px;
+    }
+
+    #cancel-edit{
+        width: 200px;
+    }
+
+    .title-edit-form{
+        margin: 10px;
+        font-size: 18px;
+    }
+}
