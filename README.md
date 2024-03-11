@@ -36,7 +36,8 @@ Acesse o site [aqui](https://anacamorims.github.io/formulario-pda.github.io/)
 
 #
 
-![image](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/0cc8d66c-9e7d-481b-9302-8f5509ccb7a5)
+![image](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/2408378a-ba5f-4995-a8f1-7ba322a9033a)
+
 
 #
 
