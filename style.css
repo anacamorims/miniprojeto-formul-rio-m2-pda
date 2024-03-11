@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Average+Sans&family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -35,7 +32,7 @@ header{
 }
 
 
-.registration{
+.title-form{
     margin-bottom: 10%;
     font-family: "Roboto", sans-serif, 'Courier New';
     font-weight: 400;
@@ -55,6 +52,9 @@ header{
     padding-right: 20px;
 }
 
+.img-header:hover{
+    transform: scale(1.1);
+}
 
 .material-symbols-outlined:hover{
     color: #ccc;
@@ -156,7 +156,7 @@ label {
 }
 
 
-#fuel{
+.fuel{
     margin-right: 70px;
     padding: 5px; 
     border: 1px solid #ccc; 
@@ -176,7 +176,6 @@ label {
 #car-list{
     display: flex;
     flex-wrap: wrap;
-    text-align: start;
 }
 
 
@@ -207,21 +206,27 @@ label {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: auto; /* Altura automática, ajuste conforme necessário */
-    max-height: 500px; /* Altura máxima desejada */
+    height: auto; 
+    max-height: 500px; 
     padding: 10px;
     overflow-y: auto;
-    
 }
 
+#submit-edit{
+    background-color: green;
+}
+
+#submit-edit:hover{
+    background-color: #e6e7f3;
+}
 
 #edit-form::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem */
+    width: 8px;
 }
 
 
 #edit-form::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Cor do polegar da barra de rolagem */
+    background-color: transparent; 
 }
 
 
@@ -236,14 +241,9 @@ label {
     margin: 2rem;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     background-color: rgb(255, 255, 255);
-    
     width: 400px;
-    
-
     cursor: pointer;
     font-family: "Roboto", sans-serif, 'Courier New';
-    color: #222dc5;
-    
 }
 
 
@@ -251,6 +251,95 @@ label {
     background-color: red;
 }
 
+#cancel-edit:hover{
+    background-color: #e6e7f3;
+}
+
+
+  
 @media screen and (max-width: 480px) {
     
-  }
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        position: fixed;
+    }
+
+    input {
+        width: 200px;
+    }
+    
+    .container-form {
+        margin: 3rem;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fuel{
+        margin-right: 20px;
+        width: 100px;
+        font-size: 13px; 
+    }
+
+    .car-card {
+        width: auto;
+        margin-left: 20px;
+        padding: 20px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #car-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edit-button{
+        width: 200px;
+    }
+
+    .remove-car{
+        width: 200px;
+    }
+    
+    
+    #edit-car-form {
+        width: 100%;
+        
+    }
+
+    .imgCar{
+        display: none;
+    }
+
+    #edit-car-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+        width: 100%;
+    }
+
+    #submit-edit{
+        width: 200px;
+    }
+
+    #cancel-edit{
+        width: 200px;
+    }
+
+    .title-edit-form{
+        margin: 10px;
+        font-size: 18px;
+    }
+}
