@@ -29,15 +29,24 @@ Neste projeto voltado para uma oficina de automóveis, os usuários podem preenc
 ### ⚙️ Resultado
 
 Acesse o site [aqui](https://anacamorims.github.io/formulario-pda.github.io/)
+
 #
 
 ![image](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/2278eb62-61eb-416c-bdeb-0351c52c6779)
 
+#
+
 ![image](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/0cc8d66c-9e7d-481b-9302-8f5509ccb7a5)
 
-file:///home/ana/V%C3%ADdeos/Grava%C3%A7%C3%B5es%20de%20tela/Grava%C3%A7%C3%A3o%20de%20tela%20de%2011-03-2024%2010:34:00.webm
+#
 
-file:///home/ana/V%C3%ADdeos/Grava%C3%A7%C3%B5es%20de%20tela/Grava%C3%A7%C3%A3o%20de%20tela%20de%2011-03-2024%2010:40:37.webm
+[video-proj-responsivo.webm](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/0b0364e6-78a5-44fa-a4ee-c031c840d332)
 
 #
-🖇️ Aplicação desenvolvida como projeto final do módulo 1 para a PdA(Programadores do Amanhã)  
+
+[video-proj-web.webm](https://github.com/anacamorims/miniprojeto-formul-rio-m2-pda/assets/132526900/dd35533e-efa6-44b9-a1d2-f4f093547d93)
+
+
+#
+🖇️ Aplicação desenvolvida como Miniprojeto do módulo 2 para a PdA(Programadores do Amanhã)  
+
