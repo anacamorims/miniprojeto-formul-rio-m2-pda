@@ -50,14 +50,14 @@ document.getElementById("carForm").addEventListener("submit", function (e) {
 
 
 
-    if (!client || !telphone || !doc || !andress || !date || !brand || !model || !plate || !year || !color || fuel === "Selecione" || !problem) {
+  if (!client || !telphone || !doc || !andress || !date || !brand || !model || !plate || !year || !color || fuel === "Selecione" || !problem) {
     
-    alert("Por favor, preencha todos os campos.");
+  alert("Por favor, preencha todos os campos.");
     return;
-    } 
+  } 
 
 
-    const car = new Car(
+  const car = new Car(
     client,
     telphone,
     doc,
